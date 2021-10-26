@@ -1,2 +1,3 @@
-# fyn
+# Fyn
+
 The Fyn programming language
