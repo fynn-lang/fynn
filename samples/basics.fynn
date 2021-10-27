@@ -1,0 +1,64 @@
+# Comments
+# This is a comment
+
+# Logging
+Sys.io.log("Hello, world!");
+
+# Variables
+bool myVar1 = true;
+int myVar2 = 1;
+float myVar3 = 0.5;
+str myVar4 = "hi";
+const str myVar5 = "This cannot be mutated";
+
+# Lists
+int[5] nums = [1, 2, 3, 4, 5];
+
+nums[0] = 4;
+
+# If Statements
+if (true) {
+	Sys.io.log("true");
+};
+
+if (1 == 1) Sys.io.log("one");
+if (1 <= 1) Sys.io.log("two");
+if (1 > 1) Sys.io.log("three");
+
+# Loops
+while (true) {
+	Sys.io.log("infinite loop alert");
+};
+
+# Functions
+fn myFunction = bool -> (str param1, int param2) {
+	if (param1 == "hello") {
+		<- true;
+	};
+	else if (param2 == 0) {
+		<- true;
+	};
+	<- false;
+};
+
+fn myOtherFunction = void -> (str name) {
+	if (name == "None") <-;
+	Sys.io.log(name);
+};
+
+# Classes
+# Default to private
+class MyClass = {
+	str data;
+	$str publicData = "public data";
+
+	$_init = MyClass -> (str data) {
+		this.data = data;
+	};
+
+	$setData = void -> (str data) this.data = data;
+
+	privateFunction = void -> () Sys.io.log("yes");
+};
+
+MyClass myClass = @MyClass();
